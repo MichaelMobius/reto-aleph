@@ -1,0 +1,23 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#000000"><title>19 · XOR — RETO ALEPH</title><link rel="stylesheet" href="../assets/style.css"></head><body><main class="shell"><header><div class="brand">RETO ALEPH // 42</div><div class="ring">IV · RASTROS</div></header><section class="card"><div class="eyebrow">estación 19 / 42</div><h1 class="level">19</h1><h2 class="title">XOR</h2><p class="lead">Cada byte fue combinado con la misma llave usando XOR.</p><div class="terminal">cipher(hex) = 474f474558434b
+key(decimal) = 42</div><div class="row"><input id="answer"><button onclick="solveNineteen()">recuperar</button></div><div id="result" class="result"></div><div class="tiny" style="margin-top:22px">Esta numeración identifica la estación; no indica un orden obligatorio.</div></section><footer>Todo ocurre dentro de un laboratorio deliberadamente vulnerable.</footer></main><script src="../assets/common.js"></script><script>
+async function solveNineteen(){
+  const v=norm(document.getElementById('answer').value),out=document.getElementById('result');
+  if(await sha256Text(v)!=='0c9a4577a1c63a51c8d3f37e14dce6c0737026e1445701c80a563c8014385cc0'){out.innerHTML='<span class="bad">No coincide. Revisa la evidencia.</span>';return}
+  out.innerHTML=`<div class="ok"><span class="rune">T</span>fragmento recuperado</div>
+  <div class="mirror-gate" id="mirror19">
+    <div class="tiny">PELDAÑO::19 // SECOND READING</div>
+    <p>Si llegaste aquí desde Borges, esta estación tiene otra función. Un número también puede tener reverso.</p>
+    <button class="mirror-button" onclick="reflectNineteen()">MIRROR::19</button>
+    <div class="mirror-number" id="mirrorNumber"><span>19</span></div>
+    <div id="mirrorRoute" class="mirror-route"></div>
+  </div>
+  <div class="next"><a class="btn" href="../20-digest/index.html">continuar →</a></div>`;
+  try{localStorage.setItem('aleph_last_rune','T');localStorage.setItem('aleph_rune_19','T')}catch(e){}
+}
+function reflectNineteen(){
+  const n=document.getElementById('mirrorNumber'),r=document.getElementById('mirrorRoute');
+  n.classList.add('reflected');
+  n.querySelector('span').textContent='91';
+  r.innerHTML=`<div class="terminal">19 → MIRROR → 91\n91 = ? × ?\nROUTE:: ../secret/?step=91</div>`;
+}
+</script><!-- cache.19=3f --><script type="module" src="../assets/aleph3d.js"></script></body></html>
