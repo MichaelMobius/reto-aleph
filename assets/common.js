@@ -1,5 +1,10 @@
 function norm(s){return String(s??'').trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
 async function sha256Text(s){const d=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return [...new Uint8Array(d)].map(x=>x.toString(16).padStart(2,'0')).join('')}
+function solveExact(expected,next,rune){
+ const inp=document.getElementById('answer'),out=document.getElementById('result');
+ const v=String(inp?.value??'').trim();
+ if(v===expected)reveal(next,rune);else out.innerHTML='<span class="bad">No coincide. Revisa la evidencia.</span>'
+}
 async function solveHash(expectedHash,next,rune,opts={}){
  const inp=document.getElementById('answer'),out=document.getElementById('result');
  let v=norm(inp.value);if(opts.compact)v=v.replace(/[^a-z0-9]/g,'');
