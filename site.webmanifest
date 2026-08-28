@@ -1,0 +1,15 @@
+{
+  "name": "RETO ALEPH 42",
+  "short_name": "ALEPH42",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#050806",
+  "theme_color": "#64ff85",
+  "shortcuts": [
+    {
+      "name": "memory fragment",
+      "url": "./40-worker/index.html?rune=M"
+    }
+  ],
+  "scope": "./"
+}

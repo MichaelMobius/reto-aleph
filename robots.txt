@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /secret/
+Disallow: /38-history/
+# rune=M
