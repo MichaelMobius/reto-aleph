@@ -27,4 +27,9 @@ async function solveGeoCells(acceptedHashes,precision,next,rune){
 addEventListener('DOMContentLoaded',()=>{
  document.querySelectorAll('input').forEach((el,i)=>{if(!el.getAttribute('aria-label'))el.setAttribute('aria-label',el.placeholder||`respuesta ${i+1}`)});
  document.querySelectorAll('audio').forEach((el,i)=>{if(!el.getAttribute('aria-label'))el.setAttribute('aria-label',`audio del reto ${i+1}`)});
+ // UCLA y Bletchley no deben heredar un ejemplo de coordenadas de Buenos Aires.
+ if(/\/(?:34-gps-ucla|35-gps-bletchley)\//.test(location.pathname)){
+  const answer=document.getElementById('answer');
+  if(answer){answer.placeholder='latitud, longitud';answer.setAttribute('aria-label','latitud, longitud')}
+ }
 });
