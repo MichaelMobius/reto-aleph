@@ -1,0 +1,16 @@
+{
+  "version": "ALEPH100-RC1",
+  "changes": [
+    "utf8 gate fixed",
+    "proof-backed hidden/codex/comedia state",
+    "HASARD chi-square strengthened",
+    "OSINT/GPS answers hashed",
+    "station 27 route renamed",
+    "station 30/31 spoilers removed",
+    "WebGL stacking fixed",
+    "lite/offline fallback",
+    "mobile grid fix",
+    "JODI edge-to-edge visual patch",
+    "reduced-motion improvements"
+  ]
+}
