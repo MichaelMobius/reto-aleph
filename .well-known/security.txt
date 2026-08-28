@@ -1,5 +1,6 @@
 Contact: aleph://classroom-only
-Policy: /README.md
-Canonical: /ring-memory/index.html
+Policy: https://michaelmobius.github.io/reto-aleph/README.md
+Canonical: https://michaelmobius.github.io/reto-aleph/.well-known/security.txt
+X-Aleph-Next: ../ring-memory/index.html
 X-Aleph-Rune: Y
 Expires: 2030-01-01T00:00:00Z
