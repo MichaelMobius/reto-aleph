@@ -1,5 +1,27 @@
 /* RETO ALEPH — portada: retícula 3 + 4 y alineación interna */
 
+/*
+   Las capas decorativas de la card (ERR//00//ERR// y PACKET:UNSTABLE)
+   pueden extenderse fuera de su caja. Son puramente visuales: nunca deben
+   interceptar el cursor sobre la navegación superior.
+*/
+.card::before,
+.card::after {
+  pointer-events: none;
+}
+
+/* Garantiza que los siete nodos sean la capa interactiva superior. */
+.node-map {
+  position: relative;
+  z-index: 20;
+  isolation: isolate;
+}
+.node-map > a {
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+}
+
 /* Solo afecta al bloque de anillos de la portada. */
 .card > .grid {
   display: grid;
