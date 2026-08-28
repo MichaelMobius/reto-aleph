@@ -1,0 +1,2 @@
+ARCHIVE ENTRY v2
+El registro visible fue limpiado. La memoria no desaparece al editar un archivo.
