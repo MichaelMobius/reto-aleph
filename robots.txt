@@ -1,5 +1,6 @@
 User-agent: *
-Disallow: /admin/
-Disallow: /secret/
-Disallow: /38-history/
+Disallow: /reto-aleph/admin/
+Disallow: /reto-aleph/secret/
+Disallow: /reto-aleph/38-history/
+# project-relative-next=38-history/
 # rune=M
